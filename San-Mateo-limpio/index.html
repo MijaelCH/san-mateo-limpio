@@ -4,170 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Nature Place Day Camp</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nature-green': '#1A3C34',
-                        'nature-cream': '#F4F1EA',
-                        'nature-accent': '#8FBC8F',
-                    },
-                    fontFamily: {
-                        sans: ['"DM Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Estilos personalizados adicionales */
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
-        }
-        .scroll-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scroll-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+    <link href="./CSS/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-nature-cream text-gray-800 font-sans antialiased">   
+<body>
+
+   
+        
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-nature-green p-4 shadow-xl lg:hidden">
-            <div class="flex flex-col space-y-4 text-center">
-                <a href="#" class="block py-2 hover:bg-white/10 rounded">About Us</a>
-                <a href="#" class="block py-2 hover:bg-white/10 rounded">Programs</a>
-                <a href="#" class="block py-2 hover:bg-white/10 rounded">Enroll Now</a>
-            </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#">About Us</a>
+            <a href="#">Programs</a>
+            <a href="#">Enroll Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <header class="hero">
         <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="./img/san-mateo-main.webp" alt="Forest Stream" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/30 hero-overlay"></div>
+        <div class="hero-bg">
+            <img src="./img/san-mateo-main.webp" alt="Forest Stream">
+            <div class="hero-overlay"></div>
         </div>
 
         <!-- Hero Content -->
-        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto mt-20">
-            <h1 class="font-serif text-5xl md:text-7xl mb-4 leading-tight">Unidos Limpiamos,<br> Unidos Crecemos</h1>
-            <p class="text-lg md:text-xl tracking-widest uppercase mb-12 font-light">en San Mateo de Huanchor</p>
+        <div class="hero-content">
+            <h1 class="hero-title">Unidos Limpiamos,<br> Unidos Crecemos</h1>
+            <p class="hero-subtitle">en San Mateo de Huanchor</p>
             
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <a href="#" class="bg-nature-cream text-nature-green px-8 py-3 rounded font-bold hover:bg-white transition duration-300 w-full md:w-auto">
-                    Registrate
+            <div class="hero-actions">
+                <a href="#" class="btn-hero">
+                    REGISTRATE
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Mission Section -->
-    <section class="py-24 px-6 bg-nature-cream text-center">
-        <div class="max-w-3xl mx-auto">
-            <div class="mb-6 flex justify-center">
+    <section class="section-mission">
+        <div class="mission-content">
+            <div class="flex justify-center">
                 <!-- Mountain Icon -->
-                <svg class="w-16 h-8 text-nature-green opacity-60" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="mountain-icon" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M10 40 L30 10 L50 40 L70 20 L90 40" />
                 </svg>
             </div>
-            <h2 class="font-serif text-4xl md:text-5xl text-nature-green mb-6">Find Your Place In Nature</h2>
-            <p class="text-lg text-gray-600 leading-relaxed mb-10">
-                We are a summer day camp for children 4–16 & year-round workshops for people of all ages in a nature-oriented, and non-competitive environment.
+            <h2 class="section-title">Historia de defensa ecológica</h2>
+            <p class="section-text">
+                San Mateo de Huanchor, considerado el primer distrito ecológico del Perú y del mundo, se destacó por defender sus derechos ambientales. Entre 1905 y 1930, la fundición Tamboraque operó cerca del distrito, generando preocupación por la contaminación. En 1934, tras la muerte probable por envenenamiento de un trabajador y la falta de apoyo de la empresa, la comunidad reaccionó violentamente contra la fundición, dejando varios mártires que son recordados hasta hoy.
             </p>
-            <a href="#" class="inline-block bg-nature-green text-white px-8 py-3 rounded text-sm font-bold tracking-wider hover:bg-opacity-90 transition">
+            <a href="#" class="btn-mission">
                 OUR MISSION
             </a>
         </div>
     </section>
 
     <!-- Feature Section (Camp Image & Box) -->
-    <section class="relative h-[600px] md:h-[700px]">
-        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop" alt="Kids in nature" class="w-full h-full object-cover">
+    <section class="section-feature">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop" alt="Kids in nature" class="feature-bg">
         
-        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="feature-overlay"></div>
 
         <!-- Floating Content Box -->
-        <div class="absolute bottom-10 left-4 md:bottom-20 md:left-20 bg-white p-8 md:p-12 max-w-md shadow-2xl">
-            <span class="text-xs font-bold tracking-widest text-gray-500 uppercase mb-2 block">Summer Camp</span>
-            <h3 class="font-serif text-3xl text-nature-green mb-4">The Nature Place Day Camp</h3>
-            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+        <div class="feature-card">
+            <span class="feature-label">Summer Camp</span>
+            <h3 class="feature-title">The Nature Place Day Camp</h3>
+            <p class="feature-desc">
                 On 200 beautiful acres in Rockland County, New York, we bring you The Nature Place Day Camp, 6 weeks of summer camp for children ages 4-16 from July 1 – August 9.
             </p>
-            <div class="flex items-center gap-6">
-                <a href="#" class="bg-nature-green text-white px-6 py-3 rounded text-xs font-bold hover:bg-opacity-90 transition">LEARN MORE</a>
-                <a href="#" class="text-nature-green text-xs font-bold flex items-center hover:underline">
+            <div class="feature-actions">
+                <a href="#" class="btn-learn">LEARN MORE</a>
+                <a href="#" class="link-enroll">
                     ENROLL TODAY 
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-24 bg-nature-cream overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="flex justify-center mb-4">
-                    <svg class="w-12 h-6 text-nature-green opacity-60" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2">
+    <section class="section-team">
+        <div class="container">
+            <div class="team-header">
+                <div class="flex justify-center" style="margin-bottom: 1rem;">
+                    <svg width="48" height="24" style="color: var(--color-nature-green); opacity: 0.6;" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M10 40 L50 10 L90 40" />
                     </svg>
                 </div>
-                <h2 class="font-serif text-4xl text-nature-green mb-2">Meet Our Team</h2>
-                <a href="#" class="text-xs font-bold tracking-widest uppercase text-gray-500 hover:text-nature-green flex items-center justify-center gap-1">
-                    Full Team <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
+                <h2 class="section-title" style="margin-bottom: 0.5rem; font-size: 2.25rem;">Mártires de Huanchor</h2>
+                
             </div>
 
             <!-- Team Carousel -->
-            <div class="relative max-w-5xl mx-auto">
-                <div id="team-container" class="flex overflow-x-auto scroll-hide gap-8 md:gap-12 pb-8 snap-x snap-mandatory justify-start md:justify-center">
+            <div class="team-carousel">
+                <div id="team-container" class="team-container">
                     
                     <!-- Member 1 -->
-                    <div class="min-w-[250px] text-center snap-center">
-                        <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" alt="Scott Dunn" class="w-full h-full object-cover">
+                    <div class="team-member">
+                        <div class="member-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" alt="Scott Dunn" class="member-img">
                         </div>
-                        <h3 class="font-serif text-xl text-nature-green font-bold">Scott Dunn</h3>
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mt-1">Director of Programming</p>
+                        <h3 class="member-name">Scott Dunn</h3>
+                        <p class="member-role">Director of Programming</p>
                     </div>
 
                     <!-- Member 2 -->
-                    <div class="min-w-[250px] text-center snap-center">
-                        <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop" alt="Emily Selover" class="w-full h-full object-cover">
+                    <div class="team-member">
+                        <div class="member-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop" alt="Emily Selover" class="member-img">
                         </div>
-                        <h3 class="font-serif text-xl text-nature-green font-bold">Emily Selover</h3>
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mt-1">Assistant Director</p>
+                        <h3 class="member-name">Emily Selover</h3>
+                        <p class="member-role">Assistant Director</p>
                     </div>
 
                     <!-- Member 3 -->
-                    <div class="min-w-[250px] text-center snap-center">
-                        <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop" alt="Ayla Dunn Bieber" class="w-full h-full object-cover">
+                    <div class="team-member">
+                        <div class="member-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop" alt="Ayla Dunn Bieber" class="member-img">
                         </div>
-                        <h3 class="font-serif text-xl text-nature-green font-bold">Ayla Dunn Bieber</h3>
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mt-1">Administrative Director</p>
+                        <h3 class="member-name">Ayla Dunn Bieber</h3>
+                        <p class="member-role">Administrative Director</p>
                     </div>
 
                 </div>
 
                 <!-- Carousel Controls -->
-                <div class="flex justify-center gap-4 mt-8">
-                    <button id="prev-btn" class="w-10 h-10 rounded-full border border-nature-green text-nature-green flex items-center justify-center hover:bg-nature-green hover:text-white transition">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="carousel-controls">
+                    <button id="prev-btn" class="btn-control">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
-                    <button id="next-btn" class="w-10 h-10 rounded-full border border-nature-green text-nature-green flex items-center justify-center hover:bg-nature-green hover:text-white transition">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <button id="next-btn" class="btn-control">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
                 </div>
             </div>
@@ -175,44 +144,44 @@
     </section>
 
     <!-- Featured Event Section -->
-    <section class="bg-nature-green text-white py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-10 border-b border-white/20 pb-6">
-                <h2 class="font-serif text-3xl md:text-4xl">Featured Event</h2>
-                <a href="#" class="bg-nature-cream text-nature-green px-4 py-2 rounded text-xs font-bold uppercase hover:bg-white transition">All Events</a>
+    <section class="section-event">
+        <div class="container">
+            <div class="event-header">
+                <h2 style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 700;">Featured Event</h2>
+                <a href="#" class="btn-all-events">All Events</a>
             </div>
 
-            <div class="bg-white text-nature-green p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-xl rounded-sm">
-                <div class="text-center md:text-left md:w-1/6">
-                    <span class="block text-sm font-bold uppercase tracking-wider text-gray-500">Nov</span>
-                    <span class="block text-5xl font-serif font-bold">04</span>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="date-month">Nov</span>
+                    <span class="date-day">04</span>
                 </div>
                 
-                <div class="md:w-3/6">
-                    <h3 class="font-serif text-2xl font-bold mb-3">Family Program: Songs Around the Campfire</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">
+                <div class="event-info">
+                    <h3 class="event-title">Family Program: Songs Around the Campfire</h3>
+                    <p class="event-desc">
                         Singing, especially around a blazing fire, is a camp tradition. Join Scott Dunn and others for some sing-along favorites.
                     </p>
                 </div>
 
-                <div class="md:w-2/6 flex flex-col gap-4 text-sm border-l border-gray-200 pl-0 md:pl-8 w-full">
-                    <div class="flex justify-between">
-                        <span class="font-bold uppercase text-xs tracking-wider text-gray-400">Duration</span>
+                <div class="event-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Duration</span>
                         <span class="font-medium">9:30pm - 10:30pm</span>
                     </div>
-                    <div class="flex justify-between">
-                        <span class="font-bold uppercase text-xs tracking-wider text-gray-400">Group</span>
+                    <div class="detail-row">
+                        <span class="detail-label">Group</span>
                         <span class="font-medium">A</span>
                     </div>
-                    <div class="flex justify-between">
-                        <span class="font-bold uppercase text-xs tracking-wider text-gray-400">Location</span>
+                    <div class="detail-row">
+                        <span class="detail-label">Location</span>
                         <span class="font-medium">Main Hall</span>
                     </div>
                 </div>
 
-                <div class="md:w-auto">
-                    <a href="#" class="w-12 h-12 rounded-full border border-nature-green flex items-center justify-center hover:bg-nature-green hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div class="md-w-auto">
+                    <a href="#" class="btn-event-arrow">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
             </div>
@@ -220,71 +189,71 @@
     </section>
 
     <!-- Blog Section -->
-    <section class="bg-nature-green text-white py-20 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <section class="section-blog">
+        <div class="blog-grid">
             
             <!-- Blog Intro -->
-            <div class="lg:col-span-1 pr-8">
-                <h2 class="font-serif text-4xl mb-6">Our Blog</h2>
-                <p class="text-gray-300 mb-8 leading-relaxed">
+            <div class="blog-intro">
+                <h2 style="font-family: var(--font-serif); font-size: 2.25rem; margin-bottom: 1.5rem;">Our Blog</h2>
+                <p class="blog-desc">
                     Musings, events, stories, activities and more from The Nature Place.
                 </p>
-                <a href="#" class="inline-block bg-nature-cream text-nature-green px-6 py-3 rounded text-xs font-bold uppercase hover:bg-white transition">
+                <a href="#" class="btn-visit-blog">
                     Visit Blog
                 </a>
                 <!-- Decorative Illustration -->
-                <div class="mt-12 opacity-20">
-                    <svg class="w-32 h-32" viewBox="0 0 100 100" fill="currentColor">
+                <div class="blog-decoration">
+                    <svg width="100%" height="100%" viewBox="0 0 100 100" fill="currentColor">
                         <path d="M50 90 C 20 90 10 50 10 50 C 10 50 20 10 50 10 C 80 10 90 50 90 50 C 90 50 80 90 50 90 Z" />
                     </svg>
                 </div>
             </div>
 
             <!-- Blog Cards -->
-            <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="blog-cards">
                 
                 <!-- Card 1 -->
-                <article class="group cursor-pointer">
-                    <div class="h-48 overflow-hidden mb-4 rounded-sm">
-                        <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=1000&auto=format&fit=crop" alt="Gardening" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <article class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=1000&auto=format&fit=crop" alt="Gardening" class="blog-img">
                     </div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-nature-accent mb-2 block">Activities with Eva</span>
-                    <h3 class="font-serif text-xl font-bold mb-2 leading-tight group-hover:text-nature-accent transition">The Gardener and the Cook: Garden Time + Sauerkraut Recipe</h3>
-                    <p class="text-sm text-gray-400 mb-4 line-clamp-2">Our cooking instructor, Eva Sziegti, encourages us to take a gardener's approach to the...</p>
-                    <a href="#" class="text-xs font-bold uppercase flex items-center hover:text-nature-accent transition">
-                        Read Post <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <span class="blog-category">Activities with Eva</span>
+                    <h3 class="blog-title">The Gardener and the Cook: Garden Time + Sauerkraut Recipe</h3>
+                    <p class="blog-excerpt">Our cooking instructor, Eva Sziegti, encourages us to take a gardener's approach to the...</p>
+                    <a href="#" class="link-read-post">
+                        Read Post <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </article>
 
                 <!-- Card 2 -->
-                <article class="group cursor-pointer">
-                    <div class="h-48 overflow-hidden mb-4 rounded-sm">
-                        <img src="https://images.unsplash.com/photo-1596908181055-e10301d47d0e?q=80&w=1000&auto=format&fit=crop" alt="Foraging" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <article class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596908181055-e10301d47d0e?q=80&w=1000&auto=format&fit=crop" alt="Foraging" class="blog-img">
                     </div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-nature-accent mb-2 block">Sustainability Scoop</span>
-                    <h3 class="font-serif text-xl font-bold mb-2 leading-tight group-hover:text-nature-accent transition">The Foraging Life: Lessons & Training</h3>
-                    <p class="text-sm text-gray-400 mb-4 line-clamp-2">Wild food forager Paul Tapper shares his insights on foraging life and gives some...</p>
-                    <a href="#" class="text-xs font-bold uppercase flex items-center hover:text-nature-accent transition">
-                        Read Post <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <span class="blog-category">Sustainability Scoop</span>
+                    <h3 class="blog-title">The Foraging Life: Lessons & Training</h3>
+                    <p class="blog-excerpt">Wild food forager Paul Tapper shares his insights on foraging life and gives some...</p>
+                    <a href="#" class="link-read-post">
+                        Read Post <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </article>
 
             </div>
             
-            <!-- Carousel Controls (Visual only for this section based on design) -->
-            <div class="lg:col-span-3 flex justify-end gap-3 mt-4">
-                <button class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-nature-green transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <!-- Carousel Controls (Visual only) -->
+            <div class="blog-controls">
+                <button class="btn-blog-control">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
-                <button class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-nature-green transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <button class="btn-blog-control">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-nature-green text-center py-8 border-t border-white/10 text-white/40 text-sm">
+    <footer class="footer">
         <p>&copy; 2023 The Nature Place Day Camp. All rights reserved.</p>
     </footer>
 
@@ -295,7 +264,7 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
         });
 
         // Simple Team Carousel Logic
